@@ -19,8 +19,7 @@ jobs:
 
       - name: Deploy
         run: |
-          ssh -i ~/.ssh/deploy_key ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
-            cd /opt/portfolio &&
-            git pull --ff-only origin main &&
-            sudo cp -r index.html assets /var/www/html/
-          "
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            index.html assets/ \
+            ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/html/
