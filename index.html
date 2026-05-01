@@ -534,6 +534,15 @@ footer {
 .footer-logo span { color: var(--red); }
 .footer-copy { font-size: 12px; color: var(--ink2); }
 
+/* ── LETTERBOXD EMBED ───────────────────────────────── */
+#letterboxd-embed-wrapper-tc {
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--ink2);
+  line-height: 1.5;
+}
+#letterboxd-embed-wrapper-tc a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
 /* ── FADE-IN ON SCROLL ──────────────────────────────── */
 .reveal {
   opacity: 0; transform: translateY(24px);
@@ -840,6 +849,7 @@ footer {
           <span class="tag">Séries</span>
           <span class="tag">Cinéma d'auteur</span>
         </div>
+        <div id="letterboxd-embed-wrapper-tc">Chargement...</div>
       </div>
       <div class="hobby-card">
         <div class="hobby-number">02</div>
@@ -1114,6 +1124,13 @@ function setLang(l) {
   document.getElementById('btn-cv').innerHTML = `${t.btnCV} <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6.5 1v8M3 7l3.5 3.5L10 7"/><path d="M1 12h11"/></svg>`;
   document.getElementById('nav-cta-btn').textContent = t.navCta;
 }
+</script>
+
+<script>
+fetch('https://lb-embed-content.bokonon.dev?username=DeusKiwi')
+  .then(r => r.text())
+  .then(data => { document.getElementById('letterboxd-embed-wrapper-tc').innerHTML = data; })
+  .catch(() => { document.getElementById('letterboxd-embed-wrapper-tc').textContent = ''; });
 </script>
 </body>
 </html>
