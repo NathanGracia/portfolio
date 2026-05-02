@@ -183,6 +183,27 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   display: inline-flex; align-items: center; gap: 8px;
 }
 .btn-secondary:hover { border-color: var(--ink); color: var(--ink); transform: translateY(-2px); }
+.cv-dropdown { position: relative; display: inline-flex; }
+.cv-dropdown-menu {
+  position: absolute; top: calc(100% + 8px); left: 0;
+  background: var(--card-bg); border: 1.5px solid var(--rule);
+  border-radius: 10px; overflow: hidden;
+  box-shadow: 0 8px 24px oklch(0% 0 0 / .1);
+  min-width: 130px;
+  opacity: 0; transform: translateY(-6px); pointer-events: none;
+  transition: opacity .18s, transform .18s;
+  z-index: 100;
+}
+.cv-dropdown.open .cv-dropdown-menu { opacity: 1; transform: translateY(0); pointer-events: all; }
+.cv-dropdown-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 16px;
+  font-family: var(--f-display); font-size: 13px; font-weight: 500;
+  color: var(--ink2);
+  transition: background .12s, color .12s;
+}
+.cv-dropdown-item:hover { background: var(--rule); color: var(--ink); }
+.cv-dropdown-item + .cv-dropdown-item { border-top: 1px solid var(--rule); }
 .hero-photo {
   position: relative;
 }
@@ -632,10 +653,22 @@ footer {
           Voir mes projets
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
         </a>
-        <a href="#cv" class="btn-secondary" id="btn-cv">
-          Mon CV
-          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6.5 1v8M3 7l3.5 3.5L10 7"/><path d="M1 12h11"/></svg>
-        </a>
+        <div class="cv-dropdown" id="cv-dropdown">
+          <button class="btn-secondary" id="btn-cv" aria-haspopup="true" aria-expanded="false">
+            <span id="btn-cv-text">Mon CV</span>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6.5 1v8M3 7l3.5 3.5L10 7"/><path d="M1 12h11"/></svg>
+          </button>
+          <div class="cv-dropdown-menu" id="cv-dropdown-menu">
+            <a href="cv.html" target="_blank" class="cv-dropdown-item">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="2" y="1" width="10" height="12" rx="1.5"/><path d="M4 4h6M4 7h6M4 10h4"/></svg>
+              HTML
+            </a>
+            <a href="cv.html?print" target="_blank" class="cv-dropdown-item">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 1h6v3H4z"/><path d="M2 4h10a1 1 0 011 1v4a1 1 0 01-1 1H2a1 1 0 01-1-1V5a1 1 0 011-1z"/><path d="M4 9h6v4H4z"/></svg>
+              PDF
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="hero-photo">
@@ -1137,7 +1170,7 @@ function setLang(l) {
   document.getElementById('hero-eyebrow').textContent = t.eyebrow;
   document.getElementById('hero-sub').innerHTML = t.heroSub;
   document.getElementById('btn-projects').innerHTML = `${t.btnProjects} <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg>`;
-  document.getElementById('btn-cv').innerHTML = `${t.btnCV} <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6.5 1v8M3 7l3.5 3.5L10 7"/><path d="M1 12h11"/></svg>`;
+  document.getElementById('btn-cv-text').textContent = t.btnCV;
   document.getElementById('nav-cta-btn').textContent = t.navCta;
 }
 
@@ -1150,6 +1183,18 @@ langBtn.addEventListener('click', () => {
   langBtn.classList.toggle('on', next === 'en');
   langBtn.setAttribute('aria-checked', next === 'en');
   setLang(next);
+});
+
+const cvDropdown = document.getElementById('cv-dropdown');
+const cvBtn = document.getElementById('btn-cv');
+cvBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const open = cvDropdown.classList.toggle('open');
+  cvBtn.setAttribute('aria-expanded', open);
+});
+document.addEventListener('click', () => {
+  cvDropdown.classList.remove('open');
+  cvBtn.setAttribute('aria-expanded', false);
 });
 </script>
 
