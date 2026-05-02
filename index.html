@@ -1126,11 +1126,12 @@ const translations = {
   }
 };
 
-let lang = 'fr';
 const langBtn = document.getElementById('lang-toggle-btn');
+let lang = localStorage.getItem('lang') || 'fr';
 
 function setLang(l) {
   lang = l;
+  localStorage.setItem('lang', l);
   const t = translations[l];
   document.getElementById('hero-eyebrow').textContent = t.eyebrow;
   document.getElementById('hero-sub').innerHTML = t.heroSub;
@@ -1138,6 +1139,10 @@ function setLang(l) {
   document.getElementById('btn-cv').innerHTML = `${t.btnCV} <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6.5 1v8M3 7l3.5 3.5L10 7"/><path d="M1 12h11"/></svg>`;
   document.getElementById('nav-cta-btn').textContent = t.navCta;
 }
+
+langBtn.classList.toggle('on', lang === 'en');
+langBtn.setAttribute('aria-checked', lang === 'en');
+setLang(lang);
 
 langBtn.addEventListener('click', () => {
   const next = lang === 'fr' ? 'en' : 'fr';
