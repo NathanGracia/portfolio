@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CV — Nathan GRACIA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --red:    oklch(44% 0.23 15);
+  --violet: oklch(44% 0.22 272);
+  --ink:    oklch(11% 0.015 270);
+  --ink2:   oklch(38% 0.01 270);
+  --rule:   oklch(88% 0.007 80);
+  --f-display: 'Syne', sans-serif;
+  --f-body:    'DM Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--f-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── PAGE ── */
+.page {
+  width: 210mm;
+  height: 297mm;
+  margin: 0 auto;
+  padding: 12mm 13mm 11mm;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── HEADER ── */
+.header {
+  display: grid;
+  grid-template-columns: 30mm 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 13px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.header-photo {
+  width: 30mm;
+  height: 37mm;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.header-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.header-name {
+  font-family: var(--f-display);
+  font-size: 26pt;
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: .92;
+}
+.header-name em { font-style: normal; color: var(--red); }
+
+.header-title {
+  font-family: var(--f-display);
+  font-size: 9pt;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink2);
+  margin-top: 7px;
+  margin-bottom: 8px;
+}
+
+.header-accroche {
+  font-size: 8.5pt;
+  font-weight: 300;
+  color: var(--ink2);
+  line-height: 1.6;
+  max-width: 90mm;
+}
+.header-accroche strong { color: var(--ink); font-weight: 500; }
+
+.header-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+}
+.contact-item {
+  font-size: 8.5pt;
+  color: var(--ink2);
+  text-align: right;
+  line-height: 1.4;
+}
+.contact-item strong { font-weight: 500; color: var(--ink); }
+
+/* ── BODY ── */
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  flex: 1;
+  padding-top: 14px;
+}
+
+.col-left {
+  border-right: 1px solid var(--rule);
+  padding-right: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.col-right {
+  padding-left: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ── SECTION TITLE ── */
+.section-title {
+  font-family: var(--f-display);
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink2);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 12px;
+  margin-top: 18px;
+  flex-shrink: 0;
+}
+.section-group:first-child .section-title { margin-top: 0; }
+.section-title::before {
+  content: '';
+  display: block;
+  width: 20px; height: 1.5px;
+  background: var(--red);
+  flex-shrink: 0;
+}
+.section-title.violet::before { background: var(--violet); }
+
+/* ── TIMELINE ── */
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.tl-item {
+  display: grid;
+  grid-template-columns: 44px 11px 1fr;
+  gap: 0 9px;
+  position: relative;
+  padding-bottom: 11px;
+}
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: calc(44px + 9px + 4px);
+  top: 8px; bottom: 0;
+  width: 1px;
+  background: var(--rule);
+}
+.tl-item:last-child::before { display: none; }
+
+.tl-year {
+  font-family: var(--f-display);
+  font-size: 7pt;
+  font-weight: 700;
+  color: var(--ink2);
+  text-align: right;
+  padding-top: 1px;
+  line-height: 1;
+}
+.tl-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid var(--rule);
+  background: #fff;
+  margin-top: 1px;
+  justify-self: center;
+  position: relative; z-index: 1;
+  flex-shrink: 0;
+}
+.tl-role {
+  font-family: var(--f-display);
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.2;
+}
+.tl-org {
+  font-size: 8pt;
+  color: var(--violet);
+  font-weight: 400;
+  margin-top: 2px;
+}
+.tl-desc {
+  font-size: 8pt;
+  color: var(--ink2);
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: 3px;
+}
+
+/* ── PROJECTS ── */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+}
+.project-item {
+  padding-bottom: 11px;
+}
+.project-item:last-child { padding-bottom: 0; }
+.project-name {
+  font-family: var(--f-display);
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+.project-name span {
+  font-size: 7.5pt;
+  font-weight: 400;
+  color: var(--red);
+  margin-left: 5px;
+}
+.project-desc {
+  font-size: 8pt;
+  color: var(--ink2);
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+.project-tech {
+  font-size: 7.5pt;
+  color: var(--violet);
+  font-weight: 400;
+  margin-top: 3px;
+}
+
+/* ── SKILLS ── */
+.skills-block { flex-shrink: 0; }
+.skills-group-title {
+  font-family: var(--f-display);
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.skills-group-title:first-of-type { margin-top: 0; }
+.dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.dot.red { background: var(--red); }
+.dot.violet { background: var(--violet); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 4px; }
+.tag {
+  font-family: var(--f-display);
+  font-size: 7.5pt;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--rule);
+  color: var(--ink);
+}
+
+/* ── LANGUES ── */
+.lang-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.lang-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.lang-name {
+  font-family: var(--f-display);
+  font-size: 9pt;
+  font-weight: 600;
+  min-width: 60px;
+}
+.lang-level {
+  font-size: 8pt;
+  color: var(--ink2);
+  font-weight: 300;
+  min-width: 80px;
+  text-align: right;
+}
+.lang-dots { display: flex; gap: 4px; align-items: center; }
+.lang-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--rule);
+  background: #fff;
+}
+.lang-dot.filled { background: var(--red); border-color: var(--red); }
+
+/* ── LOISIRS ── */
+.loisirs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.loisir-tag {
+  font-size: 8pt;
+  font-weight: 300;
+  color: var(--ink2);
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--rule);
+}
+
+
+/* ── PRINT ── */
+@media print {
+  body { background: #fff; }
+  .page { margin: 0; width: 100%; }
+  @page { size: A4; margin: 0; }
+}
+
+@media screen {
+  body { background: oklch(94% 0.006 80); padding: 20px 0; }
+  .page { box-shadow: 0 4px 40px oklch(0% 0 0 / .12); }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-photo">
+      <img src="assets/photo.jpg" alt="Nathan GRACIA" />
+    </div>
+    <div class="header-main">
+      <div class="header-name">Nathan <em>GRACIA</em></div>
+      <div class="header-title">Data Scientist · Développeur Full Stack</div>
+      <p class="header-accroche">
+        <strong>6 ans au Ministère des Armées</strong>, j'ai progressé du développement web vers l'analyse de données et l'intelligence artificielle. J'aime comprendre les besoins, construire des outils qui servent vraiment, et expliquer ce que je fais aux gens qui vont l'utiliser.
+      </p>
+    </div>
+    <div class="header-contacts">
+      <div class="contact-item"><strong>Rennes</strong> · Permis B</div>
+      <div class="contact-item">Disponible sept. 2026</div>
+      <div class="contact-item">nathan.gracia.863@gmail.com</div>
+      <div class="contact-item">06 41 84 19 49</div>
+      <div class="contact-item">github.com/NathanGracia</div>
+      <div class="contact-item">nathangracia.com</div>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- COL LEFT : Expériences + Projets -->
+    <div class="col-left">
+
+      <div class="section-group">
+        <div class="section-title">Expériences</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">2024–26</div>
+            <div class="tl-dot"></div>
+            <div>
+              <div class="tl-role">Data Scientist / Développeur</div>
+              <div class="tl-org">Ministère des Armées · Alternance</div>
+              <div class="tl-desc">Data science, développement et déploiement au sein d'une équipe de solutions web. Animation de formations IA et cybersécurité auprès des équipes.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2022–24</div>
+            <div class="tl-dot"></div>
+            <div>
+              <div class="tl-role">Data Analyst</div>
+              <div class="tl-org">Ministère des Armées, Rennes · Alternance</div>
+              <div class="tl-desc">Analyses statistiques, visualisations, gestion de BDD et systèmes d'information.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2020–22</div>
+            <div class="tl-dot"></div>
+            <div>
+              <div class="tl-role">Développeur PHP Symfony</div>
+              <div class="tl-org">Ministère des Armées, Rennes · Alternance</div>
+              <div class="tl-desc">SI à l'échelle nationale : conception, développement, maintenance, formation.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2019–20</div>
+            <div class="tl-dot"></div>
+            <div>
+              <div class="tl-role">Freelance · Création d'entreprise</div>
+              <div class="tl-org">Indépendant</div>
+              <div class="tl-desc">Vente de sites web et d'identités numériques à des entreprises locales.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2019</div>
+            <div class="tl-dot"></div>
+            <div>
+              <div class="tl-role">Développeur Web Junior · Stage</div>
+              <div class="tl-org">VIGICORP, Nantes</div>
+              <div class="tl-desc">Stage 6 mois : environnement et enjeux du développement en entreprise.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-group">
+        <div class="section-title violet">Projets</div>
+        <div class="projects-list">
+          <div class="project-item">
+            <div class="project-name">LoL Pro Match Predictor <span>p9.nathangracia.com</span></div>
+            <div class="project-desc">Prédiction temps réel de l'issue d'un match pro LoL. AUC 0.957 à 25 min sur 9 236 matchs. XGBoost, TabNet, FT-Transformer, Optuna.</div>
+            <div class="project-tech">Python · XGBoost · Streamlit · Docker</div>
+          </div>
+          <div class="project-item">
+            <div class="project-name">Segmentation sémantique <span>p8.nathangracia.com</span></div>
+            <div class="project-desc">Classification pixel par pixel en 8 catégories (Cityscapes). U-Net + MobileNetV2, 74% mIoU. API + Streamlit sur VPS.</div>
+            <div class="project-tech">TensorFlow · FastAPI · Docker · GitHub Actions</div>
+          </div>
+          <div class="project-item">
+            <div class="project-name">blindtest-films <span>blindtoss.nathangracia.com</span></div>
+            <div class="project-desc">Blindtest musical solo/multi temps réel. Scoring vitesse, autocomplétion Levenshtein, import OMDb/YouTube, audio FFmpeg.</div>
+            <div class="project-tech">Next.js · TypeScript · Socket.IO · Prisma</div>
+          </div>
+          <div class="project-item">
+            <div class="project-name">media-gallery <span>memoss.nathangracia.com</span></div>
+            <div class="project-desc">Pipeline d'upload vers VPS via feeder .exe + API FastAPI. Tags filtrables, déduplication MD5, quota 40 GB, alertes Discord.</div>
+            <div class="project-tech">Python · FastAPI · Docker · FFmpeg</div>
+          </div>
+        </div>
+        <div style="margin-top:8px; font-size:7.5pt; color:var(--ink2); font-weight:300;">Et d'autres disponibles sur <span style="color:var(--red); font-weight:500;">github.com/NathanGracia</span></div>
+      </div>
+
+    </div>
+
+    <!-- COL RIGHT : Formation + Compétences + Langues + Loisirs -->
+    <div class="col-right">
+
+      <div class="section-group">
+        <div class="section-title">Formation</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">2024–26</div>
+            <div class="tl-dot"></div>
+            <div>
+              <div class="tl-role">Master AI Engineer</div>
+              <div class="tl-org">OpenClassrooms · Alternance Ministère des Armées</div>
+              <div class="tl-desc">Data Science &amp; Machine Learning.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2022–24</div>
+            <div class="tl-dot"></div>
+            <div>
+              <div class="tl-role">Licence Data Analyst</div>
+              <div class="tl-org">OpenClassrooms · Alternance Ministère des Armées</div>
+              <div class="tl-desc">Statistiques appliquées, visualisation.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2020–22</div>
+            <div class="tl-dot"></div>
+            <div>
+              <div class="tl-role">Licence Développeur Web</div>
+              <div class="tl-org">OpenClassrooms · Alternance Ministère des Armées</div>
+              <div class="tl-desc">PHP Symfony, full stack.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2018–19</div>
+            <div class="tl-dot"></div>
+            <div>
+              <div class="tl-role">Première année Développement Web</div>
+              <div class="tl-org">IMIE, Nantes</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2018</div>
+            <div class="tl-dot"></div>
+            <div>
+              <div class="tl-role">Baccalauréat Scientifique</div>
+              <div class="tl-org">Mention Bien</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-group">
+        <div class="section-title">Compétences</div>
+        <div class="skills-block">
+          <div class="skills-group-title"><div class="dot violet"></div> Data Science</div>
+          <div class="tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Optuna</span>
+            <span class="tag">Jupyter</span>
+          </div>
+          <div class="skills-group-title"><div class="dot red"></div> Développement Web</div>
+          <div class="tags">
+            <span class="tag">PHP Symfony</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Docker</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Next.js</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-group">
+        <div class="section-title">Langues</div>
+        <div class="lang-list">
+          <div class="lang-item">
+            <span class="lang-name">Français</span>
+            <div class="lang-dots">
+              <div class="lang-dot filled"></div>
+              <div class="lang-dot filled"></div>
+              <div class="lang-dot filled"></div>
+              <div class="lang-dot filled"></div>
+              <div class="lang-dot filled"></div>
+            </div>
+            <span class="lang-level">Natif</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">Anglais</span>
+            <div class="lang-dots">
+              <div class="lang-dot filled"></div>
+              <div class="lang-dot filled"></div>
+              <div class="lang-dot filled"></div>
+              <div class="lang-dot filled"></div>
+              <div class="lang-dot"></div>
+            </div>
+            <span class="lang-level">B2+</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-group">
+        <div class="section-title">Logiciels &amp; Outils</div>
+        <div class="tags">
+          <span class="tag">Git / GitFlow</span>
+          <span class="tag">Photoshop</span>
+          <span class="tag">Figma</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Claude</span>
+        </div>
+      </div>
+
+      <div class="section-group">
+        <div class="section-title">Soft Skills</div>
+        <div class="tags">
+          <span class="tag">Curieux</span>
+          <span class="tag">Attentif</span>
+          <span class="tag">Passionné</span>
+          <span class="tag">Autonome</span>
+          <span class="tag">Rigoureux</span>
+          <span class="tag">Adaptable</span>
+          <span class="tag">Pédagogie</span>
+          <span class="tag">Vulgarisation</span>
+          <span class="tag">Prise de parole</span>
+        </div>
+      </div>
+
+      <div class="section-group">
+        <div class="section-title">Loisirs</div>
+        <div class="loisirs-list">
+          <span class="loisir-tag">Cinéma</span>
+          <span class="loisir-tag">Jeux vidéo compétitifs</span>
+          <span class="loisir-tag">Poker</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
