@@ -634,8 +634,9 @@ footer {
     <ul class="nav-links">
       <li><a href="#about">À propos</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#cv">Parcours</a></li>
+      <li><a href="#hobbies">Loisirs</a></li>
       <li><a href="#projects">Projets</a></li>
-      <li><a href="#cv">CV</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="#contact" class="nav-cta" id="nav-cta-btn">Me contacter</a>
@@ -762,106 +763,7 @@ footer {
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="container">
-    <div class="section-label violet">Projets</div>
-    <div class="projects-grid">
-
-      <div class="project-card reveal">
-        <div class="project-thumb">
-          <img src="images/memoss.png" alt="media-gallery" />
-        </div>
-        <div class="project-body">
-          <div class="project-type" style="color: var(--red)">Pipeline · Galerie Web</div>
-          <h3 class="project-title">media-gallery</h3>
-          <p class="project-desc">Upload automatique de médias vers un VPS via un feeder Windows (.exe PyInstaller) + API FastAPI. Galerie avec miniatures, lecture inline, tags filtrables, rognage FFmpeg, déduplication MD5, quota 40 GB et alertes Discord.</p>
-          <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">Docker</span>
-            <span class="tag">FFmpeg</span>
-            <span class="tag">GitHub Actions</span>
-          </div>
-          <a href="https://memoss.nathangracia.com" target="_blank" class="project-link" style="color: var(--red)">
-            Voir en prod
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card reveal" style="transition-delay:.1s">
-        <div class="project-thumb">
-          <img src="images/league.png" alt="LoL Pro Match Predictor" />
-        </div>
-        <div class="project-body">
-          <div class="project-type" style="color: var(--violet)">Data Science · ML</div>
-          <h3 class="project-title">LoL Pro Match Predictor</h3>
-          <p class="project-desc">Prédiction de l'issue d'un match pro League of Legends en temps réel (10–25 min). XGBoost, TabNet et FT-Transformer optimisé via Optuna. AUC 0.957 à 25 min sur 9 236 matchs. Dashboard Streamlit avec deux modes de saisie.</p>
-          <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">XGBoost</span>
-            <span class="tag">Streamlit</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Jupyter</span>
-          </div>
-          <a href="https://p9.nathangracia.com" target="_blank" class="project-link" style="color: var(--violet)">
-            Voir en prod
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card reveal" style="transition-delay:.05s">
-        <div class="project-thumb">
-          <img src="images/p8.png" alt="Segmentation sémantique" />
-        </div>
-        <div class="project-body">
-          <div class="project-type" style="color: var(--violet)">Computer Vision · Deep Learning</div>
-          <h3 class="project-title">Segmentation sémantique</h3>
-          <p class="project-desc">Classification pixel par pixel en 8 catégories sur Cityscapes. U-Net + MobileNetV2, 74% mIoU. API FastAPI + app Streamlit déployées sur VPS personnel.</p>
-          <div class="project-tags">
-            <span class="tag">TensorFlow</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">Streamlit</span>
-            <span class="tag">Docker</span>
-            <span class="tag">GitHub Actions</span>
-          </div>
-          <a href="https://p8.nathangracia.com" target="_blank" class="project-link" style="color: var(--violet)">
-            Voir en prod
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card reveal" style="transition-delay:.15s">
-        <div class="project-thumb">
-          <img src="images/blindtoss.png" alt="blindtest-films" />
-        </div>
-        <div class="project-body">
-          <div class="project-type" style="color: var(--red)">Web App · Temps réel</div>
-          <h3 class="project-title">blindtest-films</h3>
-          <p class="project-desc">Blindtest musical (films, séries, jeux, anime). Solo et multijoueur temps réel, scoring vitesse, 3 vies, autocomplétion par distance de Levenshtein. Import automatisé via OMDb et YouTube, audio normalisé FFmpeg.</p>
-          <div class="project-tags">
-            <span class="tag">Next.js</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">Socket.IO</span>
-            <span class="tag">Prisma</span>
-            <span class="tag">Docker</span>
-          </div>
-          <a href="https://blindtoss.nathangracia.com" target="_blank" class="project-link" style="color: var(--red)">
-            Voir en prod
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- HOBBIES -->
-<!-- CV -->
+<!-- PARCOURS -->
 <section id="cv">
   <div class="container">
     <div class="section-label">Parcours</div>
@@ -875,7 +777,7 @@ footer {
             <div class="timeline-content">
               <div class="timeline-role">Data Scientist / Développeur</div>
               <div class="timeline-org">Ministère des Armées</div>
-              <div class="timeline-desc">Au sein d'une équipe de solutions web : data science, dev, déploiement. Animation de formations IA et cybersécurité auprès des équipes.</div>
+              <div class="timeline-desc">Au sein d'une équipe de solutions web : data science, dev et déploiement. Animation de journées de formation autour de l'IA à l'Armée : vulgarisation, pédagogie et prise de parole.</div>
             </div>
           </div>
           <div class="timeline-item">
@@ -970,6 +872,7 @@ footer {
   </div>
 </section>
 
+<!-- LOISIRS -->
 <section id="hobbies" class="section">
   <div class="container">
     <div class="section-label">Loisirs</div>
@@ -988,16 +891,219 @@ footer {
       <div class="hobby-card">
         <div class="hobby-number">02</div>
         <h3 class="hobby-title">Jeux vidéo compétitifs</h3>
-        <p class="hobby-desc">Compétition en ligne : FPS, MOBA, poker. Ranked grind.</p>
+        <p class="hobby-desc">Haut niveau en ligne : MOBA, véhicules, cartes. Ranked grind.</p>
         <div class="hobby-detail">
-          <span class="tag">FPS</span>
           <span class="tag">MOBA</span>
+          <span class="tag">Rocket League</span>
           <span class="tag">Poker</span>
         </div>
-        <div class="lobobot-wrapper"><iframe src="https://lobobot.com/box/token/xlk54nT3oxQERN4k" class="lobobot-iframe" title="League of Legends stats"></iframe></div>
-        <div class="lobobot-wrapper"><iframe src="https://lobobot.com/box/token/SR2hen5JgoksyvuG" class="lobobot-iframe" title="League of Legends stats 2"></iframe></div>
-        <div class="lobobot-wrapper"><iframe src="https://lobobot.com/box/token/k9atgHxlW3qdkGvB" class="lobobot-iframe" title="League of Legends stats 3"></iframe></div>
+        <div style="margin-top:20px;display:flex;flex-direction:column;gap:14px;">
+          <div>
+            <div style="font-family:var(--f-display);font-size:14px;font-weight:600;margin-bottom:3px;">League of Legends</div>
+            <div style="font-size:13px;color:var(--ink2);font-weight:300;">Master 450LP · top 0.3% · Compétition en équipe</div>
+          </div>
+          <div>
+            <div style="font-family:var(--f-display);font-size:14px;font-weight:600;margin-bottom:3px;">Rocket League</div>
+            <div style="font-size:13px;color:var(--ink2);font-weight:300;margin-bottom:8px;">Grand Champion 1 · top 1%</div>
+            <div class="hobby-detail" style="margin-top:0;">
+              <span class="tag">Optimisation</span>
+              <span class="tag">Communication</span>
+              <span class="tag">Planification</span>
+              <span class="tag">Sang-froid</span>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label violet">Projets</div>
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <img src="images/memoss.png" alt="media-gallery" />
+        </div>
+        <div class="project-body">
+          <div class="project-type" style="color: var(--red)">Pipeline · Galerie Web</div>
+          <h3 class="project-title">media-gallery</h3>
+          <p class="project-desc">Upload automatique de médias vers un VPS via un feeder Windows (.exe PyInstaller) + API FastAPI. Galerie avec miniatures, lecture inline, tags filtrables, rognage FFmpeg, déduplication MD5, quota 40 GB et alertes Discord.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Docker</span>
+            <span class="tag">FFmpeg</span>
+            <span class="tag">GitHub Actions</span>
+          </div>
+          <a href="https://memoss.nathangracia.com" target="_blank" class="project-link" style="color: var(--red)">
+            Voir en prod
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:.1s">
+        <div class="project-thumb">
+          <img src="images/league.png" alt="LoL Pro Match Predictor" />
+        </div>
+        <div class="project-body">
+          <div class="project-type" style="color: var(--violet)">Data Science · ML</div>
+          <h3 class="project-title">LoL Pro Match Predictor</h3>
+          <p class="project-desc">Prédiction de l'issue d'un match pro League of Legends en temps réel (10–25 min). XGBoost, TabNet et FT-Transformer optimisé via Optuna. AUC 0.957 à 25 min sur 9 236 matchs. Dashboard Streamlit avec deux modes de saisie.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Jupyter</span>
+          </div>
+          <a href="https://p9.nathangracia.com" target="_blank" class="project-link" style="color: var(--violet)">
+            Voir en prod
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:.05s">
+        <div class="project-thumb">
+          <img src="images/p8.png" alt="Segmentation sémantique" />
+        </div>
+        <div class="project-body">
+          <div class="project-type" style="color: var(--violet)">Computer Vision · Deep Learning</div>
+          <h3 class="project-title">Segmentation sémantique</h3>
+          <p class="project-desc">Classification pixel par pixel en 8 catégories sur Cityscapes. U-Net + MobileNetV2, 74% mIoU. API FastAPI + app Streamlit déployées sur VPS personnel.</p>
+          <div class="project-tags">
+            <span class="tag">TensorFlow</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Docker</span>
+            <span class="tag">GitHub Actions</span>
+          </div>
+          <a href="https://p8.nathangracia.com" target="_blank" class="project-link" style="color: var(--violet)">
+            Voir en prod
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:.15s">
+        <div class="project-thumb">
+          <img src="images/blindtoss.png" alt="blindtest-films" />
+        </div>
+        <div class="project-body">
+          <div class="project-type" style="color: var(--red)">Web App · Temps réel</div>
+          <h3 class="project-title">blindtest-films</h3>
+          <p class="project-desc">Blindtest musical (films, séries, jeux, anime). Solo et multijoueur temps réel, scoring vitesse, 3 vies, autocomplétion par distance de Levenshtein. Import automatisé via OMDb et YouTube, audio normalisé FFmpeg.</p>
+          <div class="project-tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Socket.IO</span>
+            <span class="tag">Prisma</span>
+            <span class="tag">Docker</span>
+          </div>
+          <a href="https://blindtoss.nathangracia.com" target="_blank" class="project-link" style="color: var(--red)">
+            Voir en prod
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:.2s">
+        <div class="project-thumb">
+          <div class="thumb-placeholder" style="background: linear-gradient(135deg, oklch(22% 0.08 30) 0%, oklch(14% 0.05 30) 100%);">
+            <span class="thumb-label">blackjackoss</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-type" style="color: var(--red)">Web App · Jeu · Multijoueur</div>
+          <h3 class="project-title">BlackJackoss</h3>
+          <p class="project-desc">Blackjack multijoueur 1-7 joueurs avec comptage de cartes, stratégie de base, 19 succès débloquables et skins de table. Timer de tour, chat, roue d'émotes. Entropie physique via lampe à lave (Determinoss). Balances SQLite persistées.</p>
+          <div class="project-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">WebSocket</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Docker</span>
+          </div>
+          <a href="https://blackjackoss.nathangracia.com" target="_blank" class="project-link" style="color: var(--red)">
+            Voir en prod
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:.05s">
+        <div class="project-thumb">
+          <div class="thumb-placeholder" style="background: linear-gradient(135deg, oklch(28% 0.12 145) 0%, oklch(18% 0.08 145) 100%);">
+            <span class="thumb-label">simulatioss</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-type" style="color: var(--violet)">Simulation · Canvas 2D</div>
+          <h3 class="project-title">Simulatioss</h3>
+          <p class="project-desc">Simulation d'écosystème procédurale en temps réel. 3 espèces coexistantes (plantes, herbivores, carnivores), pathfinding A*, biomes procéduraux avec lacs dessinables, 30+ paramètres ajustables, graphe de population live.</p>
+          <div class="project-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Canvas 2D</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Docker</span>
+          </div>
+          <a href="https://simulatioss.nathangracia.com" target="_blank" class="project-link" style="color: var(--violet)">
+            Voir en prod
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:.15s">
+        <div class="project-thumb">
+          <div class="thumb-placeholder" style="background: linear-gradient(135deg, oklch(20% 0.12 272) 0%, oklch(12% 0.08 272) 100%);">
+            <span class="thumb-label">determinoss</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-type" style="color: var(--violet)">Cryptographie · IoT</div>
+          <h3 class="project-title">Determinoss</h3>
+          <p class="project-desc">Générateur de graines cryptographiques alimenté par l'entropie physique d'une lampe à lave filmée 24/7. Delta de frame → SHA-256. API REST, SSE live, stream MJPEG webcam. Intégré au sabot de BlackJackoss.</p>
+          <div class="project-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">FFmpeg</span>
+            <span class="tag">WebSocket</span>
+            <span class="tag">Docker</span>
+          </div>
+          <a href="https://determinoss.nathangracia.com" target="_blank" class="project-link" style="color: var(--violet)">
+            Voir en prod
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:.1s">
+        <div class="project-thumb">
+          <div class="thumb-placeholder" style="background: linear-gradient(135deg, oklch(32% 0.15 240) 0%, oklch(20% 0.1 240) 100%);">
+            <span class="thumb-label">quizzoss</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-type" style="color: var(--violet)">IA · Éducation</div>
+          <h3 class="project-title">Quizzoss</h3>
+          <p class="project-desc">App quiz générant des questions depuis des notes Markdown via Gemini AI. MCQ avec distracteurs IA du même type, texte libre évalué, tutorat inline, éditeur intégré, rebuild en live, sync Syncthing.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Gemini AI</span>
+            <span class="tag">Docker</span>
+          </div>
+          <a href="https://quizzoss.nathangracia.com" target="_blank" class="project-link" style="color: var(--violet)">
+            Voir en prod
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
