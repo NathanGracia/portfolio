@@ -443,6 +443,20 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .hobby-detail {
   margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px;
 }
+.hobby-game {
+  margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--rule);
+}
+.hobby-game-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: 6px; margin-bottom: 10px;
+}
+.hobby-game-name {
+  font-family: var(--f-display); font-size: 14px; font-weight: 600;
+}
+.hobby-game-rank {
+  font-size: 12px; color: var(--ink2); font-weight: 300;
+}
+.hobby-game .hobby-detail { margin-top: 0; }
 
 /* ── CV / EXPERIENCE ────────────────────────────────── */
 #cv { padding: 100px 0; background: var(--bg2); }
@@ -632,14 +646,14 @@ footer {
   <div class="nav-inner">
     <a href="#hero" class="nav-logo">ng<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="#about">À propos</a></li>
+      <li><a href="#about" data-fr="À propos" data-en="About">À propos</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#cv">Parcours</a></li>
-      <li><a href="#hobbies">Loisirs</a></li>
-      <li><a href="#projects">Projets</a></li>
+      <li><a href="#cv" data-fr="Parcours" data-en="Journey">Parcours</a></li>
+      <li><a href="#hobbies" data-fr="Loisirs" data-en="Hobbies">Loisirs</a></li>
+      <li><a href="#projects" data-fr="Projets" data-en="Projects">Projets</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="#contact" class="nav-cta" id="nav-cta-btn">Me contacter</a>
+    <a href="#contact" class="nav-cta" id="nav-cta-btn" data-fr="Me contacter" data-en="Contact me">Me contacter</a>
   </div>
 </nav>
 
@@ -647,22 +661,22 @@ footer {
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-text">
-      <div class="hero-eyebrow" id="hero-eyebrow">Rennes - France · Disponible dès septembre 2026</div>
+      <div class="hero-eyebrow" id="hero-eyebrow" data-fr="Rennes - France · Disponible dès septembre 2026" data-en="Rennes - France · Available from September 2026">Rennes - France · Disponible dès septembre 2026</div>
       <h1 class="hero-name">
         Nathan<br>
         <em>GRACIA</em>
       </h1>
-      <p class="hero-sub" id="hero-sub">
+      <p class="hero-sub" id="hero-sub" data-fr-html="&lt;strong&gt;Développeur web &amp;amp; Data Scientist.&lt;/strong&gt; Je construis des outils, analyse des données et entraîne des modèles. Des deux côtés du spectre, de l'extraction à la mise en production." data-en-html="&lt;strong&gt;Web Developer &amp;amp; Data Scientist.&lt;/strong&gt; I build tools, analyse data and train models. Across the full spectrum, from extraction to production.">
         <strong>Développeur web & Data Scientist.</strong> Je construis des outils, analyse des données et entraîne des modèles. Des deux côtés du spectre, de l'extraction à la mise en production.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn-primary" id="btn-projects">
-          Voir mes projets
+          <span data-fr="Voir mes projets" data-en="See my projects">Voir mes projets</span>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
         </a>
         <div class="cv-dropdown" id="cv-dropdown">
           <button class="btn-secondary" id="btn-cv" aria-haspopup="true" aria-expanded="false">
-            <span id="btn-cv-text">Mon CV</span>
+            <span id="btn-cv-text" data-fr="Mon CV" data-en="My CV">Mon CV</span>
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6.5 1v8M3 7l3.5 3.5L10 7"/><path d="M1 12h11"/></svg>
           </button>
           <div class="cv-dropdown-menu" id="cv-dropdown-menu">
@@ -693,10 +707,10 @@ footer {
 <!-- ABOUT -->
 <section id="about">
   <div class="container">
-    <div class="section-label">À propos</div>
+    <div class="section-label" data-fr="À propos" data-en="About">À propos</div>
     <div class="about-grid reveal">
       <div>
-        <h2 class="about-headline">
+        <h2 class="about-headline" data-fr-html="Dev web.&lt;br&gt;Data Scientist.&lt;br&gt;&lt;em&gt;6 ans de terrain.&lt;/em&gt;" data-en-html="Web dev.&lt;br&gt;Data Scientist.&lt;br&gt;&lt;em&gt;6 years in the field.&lt;/em&gt;">
           Dev web.<br>
           Data Scientist.<br>
           <em>6 ans de terrain.</em>
@@ -704,22 +718,22 @@ footer {
         <div class="about-stats">
           <div class="stat-block">
             <div class="stat-num">6<span>+</span></div>
-            <div class="stat-label">années d'expérience web & data</div>
+            <div class="stat-label" data-fr="années d'expérience web &amp; data" data-en="years of web &amp; data experience">années d'expérience web & data</div>
           </div>
           <div class="stat-block">
             <div class="stat-num">3<span>×</span></div>
-            <div class="stat-label">alternances Ministère des Armées</div>
+            <div class="stat-label" data-fr="alternances Ministère des Armées" data-en="work-study programs, French Ministry of the Armed Forces">alternances Ministère des Armées</div>
           </div>
         </div>
       </div>
       <div class="about-body">
-        <p>
+        <p data-fr="Développeur de formation, data scientist de conviction. Je construis des pipelines de données, entraîne des modèles et les mets en production sur mes propres serveurs." data-en="Trained as a developer, data scientist by conviction. I build data pipelines, train models and deploy them to production on my own servers.">
           Développeur de formation, data scientist de conviction. Je construis des pipelines de données, entraîne des modèles et les mets en production sur mes propres serveurs.
         </p>
-        <p>
+        <p data-fr="6 ans au Ministère des Armées : dev PHP Symfony, puis Data Analyst, maintenant Data Scientist. Du besoin à la formation des utilisateurs, j'interviens sur tout le cycle." data-en="6 years at the French Ministry of the Armed Forces: PHP Symfony dev, then Data Analyst, now Data Scientist. From requirements gathering to user training, I work across the full cycle.">
           6 ans au Ministère des Armées : dev PHP Symfony, puis Data Analyst, maintenant Data Scientist. Du besoin à la formation des utilisateurs, j'interviens sur tout le cycle.
         </p>
-        <p>
+        <p data-fr="Basé à Rennes, disponible." data-en="Based in Rennes, available.">
           Basé à Rennes, disponible.
         </p>
       </div>
@@ -730,12 +744,12 @@ footer {
 <!-- SKILLS -->
 <section id="skills" class="section">
   <div class="container">
-    <div class="section-label">Compétences</div>
+    <div class="section-label" data-fr="Compétences" data-en="Skills">Compétences</div>
     <div class="skills-grid reveal">
       <div>
         <div class="skill-col-title">
           <div class="dot red"></div>
-          Développement Web
+          <span data-fr="Développement Web" data-en="Web Development">Développement Web</span>
         </div>
         <div class="skill-tags">
           <span class="skill-tag red">PHP Symfony</span>
@@ -748,7 +762,7 @@ footer {
       <div>
         <div class="skill-col-title">
           <div class="dot violet"></div>
-          Data Science & Analyse
+          <span data-fr="Data Science &amp; Analyse" data-en="Data Science &amp; Analysis">Data Science & Analyse</span>
         </div>
         <div class="skill-tags">
           <span class="skill-tag violet">Python</span>
@@ -766,18 +780,18 @@ footer {
 <!-- PARCOURS -->
 <section id="cv">
   <div class="container">
-    <div class="section-label">Parcours</div>
+    <div class="section-label" data-fr="Parcours" data-en="Journey">Parcours</div>
     <div class="cv-grid reveal">
       <div>
-        <div class="cv-col-title">Expériences</div>
+        <div class="cv-col-title" data-fr="Expériences" data-en="Experience">Expériences</div>
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-year">2024–26</div>
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <div class="timeline-role">Data Scientist / Développeur</div>
-              <div class="timeline-org">Ministère des Armées</div>
-              <div class="timeline-desc">Au sein d'une équipe de solutions web : data science, dev et déploiement. Animation de journées de formation autour de l'IA à l'Armée : vulgarisation, pédagogie et prise de parole.</div>
+              <div class="timeline-role" data-fr="Data Scientist / Développeur" data-en="Data Scientist / Developer">Data Scientist / Développeur</div>
+              <div class="timeline-org" data-fr="Ministère des Armées" data-en="French Ministry of the Armed Forces">Ministère des Armées</div>
+              <div class="timeline-desc" data-fr="Au sein d'une équipe de solutions web : data science, dev et déploiement. Animation de journées de formation autour de l'IA à l'Armée : vulgarisation, pédagogie et prise de parole." data-en="Within a web solutions team: data science, development and deployment. Running AI training days for the Armed Forces: simplifying complex topics, teaching, public speaking.">Au sein d'une équipe de solutions web : data science, dev et déploiement. Animation de journées de formation autour de l'IA à l'Armée : vulgarisation, pédagogie et prise de parole.</div>
             </div>
           </div>
           <div class="timeline-item">
@@ -785,49 +799,49 @@ footer {
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <div class="timeline-role">Data Analyst</div>
-              <div class="timeline-org">Ministère des Armées, Rennes</div>
-              <div class="timeline-desc">Analyses statistiques, visualisations informatives, gestion de bases de données et systèmes d'information.</div>
+              <div class="timeline-org" data-fr="Ministère des Armées, Rennes" data-en="French Ministry of the Armed Forces, Rennes">Ministère des Armées, Rennes</div>
+              <div class="timeline-desc" data-fr="Analyses statistiques, visualisations informatives, gestion de bases de données et systèmes d'information." data-en="Statistical analysis, informative visualisations, database and information systems management.">Analyses statistiques, visualisations informatives, gestion de bases de données et systèmes d'information.</div>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-year">2020–22</div>
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <div class="timeline-role">Développeur PHP Symfony</div>
-              <div class="timeline-org">Ministère des Armées, Rennes</div>
-              <div class="timeline-desc">Systèmes d'information à l'échelle nationale : analyse de besoin, conception, développement, maintenance et formation.</div>
+              <div class="timeline-role" data-fr="Développeur PHP Symfony" data-en="PHP Symfony Developer">Développeur PHP Symfony</div>
+              <div class="timeline-org" data-fr="Ministère des Armées, Rennes" data-en="French Ministry of the Armed Forces, Rennes">Ministère des Armées, Rennes</div>
+              <div class="timeline-desc" data-fr="Systèmes d'information à l'échelle nationale : analyse de besoin, conception, développement, maintenance et formation." data-en="Nationwide information systems: requirements analysis, design, development, maintenance and training.">Systèmes d'information à l'échelle nationale : analyse de besoin, conception, développement, maintenance et formation.</div>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-year">2019–20</div>
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <div class="timeline-role">Freelance / Auto-entrepreneur</div>
-              <div class="timeline-org">Indépendant</div>
-              <div class="timeline-desc">Vente de sites web et d'identités numériques à des entreprises locales.</div>
+              <div class="timeline-role" data-fr="Freelance / Auto-entrepreneur" data-en="Freelance / Sole trader">Freelance / Auto-entrepreneur</div>
+              <div class="timeline-org" data-fr="Indépendant" data-en="Self-employed">Indépendant</div>
+              <div class="timeline-desc" data-fr="Vente de sites web et d'identités numériques à des entreprises locales." data-en="Selling websites and digital identities to local businesses.">Vente de sites web et d'identités numériques à des entreprises locales.</div>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-year">2019</div>
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <div class="timeline-role">Développeur Web Junior, stage</div>
+              <div class="timeline-role" data-fr="Développeur Web Junior, stage" data-en="Junior Web Developer, internship">Développeur Web Junior, stage</div>
               <div class="timeline-org">VIGICORP, Nantes</div>
-              <div class="timeline-desc">Stage de 6 mois pour découvrir l'environnement et les enjeux du développement en entreprise.</div>
+              <div class="timeline-desc" data-fr="Stage de 6 mois pour découvrir l'environnement et les enjeux du développement en entreprise." data-en="6-month internship to discover the environment and challenges of development in a company.">Stage de 6 mois pour découvrir l'environnement et les enjeux du développement en entreprise.</div>
             </div>
           </div>
         </div>
       </div>
       <div>
-        <div class="cv-col-title">Formation</div>
+        <div class="cv-col-title" data-fr="Formation" data-en="Education">Formation</div>
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-year">2024–26</div>
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <div class="timeline-role">Master AI Engineer</div>
-              <div class="timeline-org">OpenClassrooms, alternance au Ministère des Armées</div>
-              <div class="timeline-desc">Spécialité Data Science &amp; Machine Learning.</div>
+              <div class="timeline-org" data-fr="OpenClassrooms, alternance au Ministère des Armées" data-en="OpenClassrooms, work-study at the French Ministry of the Armed Forces">OpenClassrooms, alternance au Ministère des Armées</div>
+              <div class="timeline-desc" data-fr="Spécialité Data Science &amp; Machine Learning." data-en="Data Science &amp; Machine Learning specialisation.">Spécialité Data Science &amp; Machine Learning.</div>
             </div>
           </div>
           <div class="timeline-item">
@@ -835,34 +849,34 @@ footer {
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <div class="timeline-role">Licence Data Analyst</div>
-              <div class="timeline-org">OpenClassrooms, alternance au Ministère des Armées</div>
-              <div class="timeline-desc">Analyse de données, statistiques appliquées, visualisation.</div>
+              <div class="timeline-org" data-fr="OpenClassrooms, alternance au Ministère des Armées" data-en="OpenClassrooms, work-study at the French Ministry of the Armed Forces">OpenClassrooms, alternance au Ministère des Armées</div>
+              <div class="timeline-desc" data-fr="Analyse de données, statistiques appliquées, visualisation." data-en="Data analysis, applied statistics, visualisation.">Analyse de données, statistiques appliquées, visualisation.</div>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-year">2020–22</div>
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <div class="timeline-role">Licence Développeur Web</div>
-              <div class="timeline-org">OpenClassrooms, alternance au Ministère des Armées</div>
-              <div class="timeline-desc">PHP Symfony, développement web full stack.</div>
+              <div class="timeline-role" data-fr="Licence Développeur Web" data-en="Web Development Degree">Licence Développeur Web</div>
+              <div class="timeline-org" data-fr="OpenClassrooms, alternance au Ministère des Armées" data-en="OpenClassrooms, work-study at the French Ministry of the Armed Forces">OpenClassrooms, alternance au Ministère des Armées</div>
+              <div class="timeline-desc" data-fr="PHP Symfony, développement web full stack." data-en="PHP Symfony, full stack web development.">PHP Symfony, développement web full stack.</div>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-year">2018–19</div>
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <div class="timeline-role">Première année Développement Web</div>
+              <div class="timeline-role" data-fr="Première année Développement Web" data-en="First year, Web Development">Première année Développement Web</div>
               <div class="timeline-org">IMIE, Nantes</div>
-              <div class="timeline-desc">Introduction au développement web : HTML, CSS, JS, bases de la programmation.</div>
+              <div class="timeline-desc" data-fr="Introduction au développement web : HTML, CSS, JS, bases de la programmation." data-en="Introduction to web development: HTML, CSS, JS, programming fundamentals.">Introduction au développement web : HTML, CSS, JS, bases de la programmation.</div>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-year">2018</div>
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <div class="timeline-role">Baccalauréat Scientifique</div>
-              <div class="timeline-org">Mention Bien</div>
+              <div class="timeline-role" data-fr="Baccalauréat Scientifique" data-en="Science Baccalaureate">Baccalauréat Scientifique</div>
+              <div class="timeline-org" data-fr="Mention Bien" data-en="With Honours">Mention Bien</div>
               <div class="timeline-desc"></div>
             </div>
           </div>
@@ -875,42 +889,52 @@ footer {
 <!-- LOISIRS -->
 <section id="hobbies" class="section">
   <div class="container">
-    <div class="section-label">Loisirs</div>
+    <div class="section-label" data-fr="Loisirs" data-en="Hobbies">Loisirs</div>
     <div class="hobbies-grid reveal">
       <div class="hobby-card">
         <div class="hobby-number">01</div>
-        <h3 class="hobby-title">Cinéma</h3>
-        <p class="hobby-desc">Grand écran, tous les genres, du blockbuster au cinéma d'auteur.</p>
+        <h3 class="hobby-title" data-fr="Cinéma" data-en="Cinema">Cinéma</h3>
+        <p class="hobby-desc" data-fr="Grand écran, tous les genres, du blockbuster au cinéma d'auteur." data-en="Big screen, every genre, from blockbusters to arthouse cinema.">Grand écran, tous les genres, du blockbuster au cinéma d'auteur.</p>
         <div class="hobby-detail">
-          <span class="tag">Films de genre</span>
-          <span class="tag">Séries</span>
-          <span class="tag">Cinéma d'auteur</span>
+          <span class="tag" data-fr="Films de genre" data-en="Genre films">Films de genre</span>
+          <span class="tag" data-fr="Séries" data-en="TV series">Séries</span>
+          <span class="tag" data-fr="Cinéma d'auteur" data-en="Arthouse cinema">Cinéma d'auteur</span>
         </div>
         <div id="letterboxd-embed-wrapper-tc">Chargement...</div>
       </div>
       <div class="hobby-card">
         <div class="hobby-number">02</div>
-        <h3 class="hobby-title">Jeux vidéo compétitifs</h3>
-        <p class="hobby-desc">Haut niveau en ligne : MOBA, véhicules, cartes. Ranked grind.</p>
-        <div class="hobby-detail">
-          <span class="tag">MOBA</span>
-          <span class="tag">Rocket League</span>
-          <span class="tag">Poker</span>
-        </div>
-        <div style="margin-top:20px;display:flex;flex-direction:column;gap:14px;">
-          <div>
-            <div style="font-family:var(--f-display);font-size:14px;font-weight:600;margin-bottom:3px;">League of Legends</div>
-            <div style="font-size:13px;color:var(--ink2);font-weight:300;">Master 450LP · top 0.3% · Compétition en équipe</div>
+        <h3 class="hobby-title" data-fr="Jeux vidéo compétitifs" data-en="Competitive gaming">Jeux vidéo compétitifs</h3>
+        <p class="hobby-desc" data-fr="Haut niveau en ligne : MOBA, véhicules, cartes. Ranked grind." data-en="High-level online play: MOBA, vehicular, cards. Ranked grind.">Haut niveau en ligne : MOBA, véhicules, cartes. Ranked grind.</p>
+        <div class="hobby-game">
+          <div class="hobby-game-head">
+            <span class="hobby-game-name">League of Legends</span>
+            <span class="hobby-game-rank">Master 450 LP · top 0.3%</span>
           </div>
-          <div>
-            <div style="font-family:var(--f-display);font-size:14px;font-weight:600;margin-bottom:3px;">Rocket League</div>
-            <div style="font-size:13px;color:var(--ink2);font-weight:300;margin-bottom:8px;">Grand Champion 1 · top 1%</div>
-            <div class="hobby-detail" style="margin-top:0;">
-              <span class="tag">Optimisation</span>
-              <span class="tag">Communication</span>
-              <span class="tag">Planification</span>
-              <span class="tag">Sang-froid</span>
-            </div>
+          <div class="hobby-detail">
+            <span class="tag">MOBA</span>
+            <span class="tag" data-fr="Compétition en équipe" data-en="Team competition">Compétition en équipe</span>
+          </div>
+        </div>
+        <div class="hobby-game">
+          <div class="hobby-game-head">
+            <span class="hobby-game-name">Rocket League</span>
+            <span class="hobby-game-rank">Grand Champion 1 · top 1%</span>
+          </div>
+          <div class="hobby-detail">
+            <span class="tag">Optimisation</span>
+            <span class="tag">Communication</span>
+            <span class="tag" data-fr="Planification" data-en="Planning">Planification</span>
+            <span class="tag" data-fr="Sang-froid" data-en="Composure">Sang-froid</span>
+          </div>
+        </div>
+        <div class="hobby-game">
+          <div class="hobby-game-head">
+            <span class="hobby-game-name">Poker</span>
+          </div>
+          <div class="hobby-detail">
+            <span class="tag" data-fr="Lecture d'adversaire" data-en="Reading opponents">Lecture d'adversaire</span>
+            <span class="tag" data-fr="Gestion du risque" data-en="Risk management">Gestion du risque</span>
           </div>
         </div>
       </div>
@@ -929,9 +953,9 @@ footer {
           <img src="images/memoss.png" alt="media-gallery" />
         </div>
         <div class="project-body">
-          <div class="project-type" style="color: var(--red)">Pipeline · Galerie Web</div>
+          <div class="project-type" style="color: var(--red)" data-fr="Pipeline · Galerie Web" data-en="Pipeline · Web Gallery">Pipeline · Galerie Web</div>
           <h3 class="project-title">media-gallery</h3>
-          <p class="project-desc">Upload automatique de médias vers un VPS via un feeder Windows (.exe PyInstaller) + API FastAPI. Galerie avec miniatures, lecture inline, tags filtrables, rognage FFmpeg, déduplication MD5, quota 40 GB et alertes Discord.</p>
+          <p class="project-desc" data-fr="Upload automatique de médias vers un VPS via un feeder Windows (.exe PyInstaller) + API FastAPI. Galerie avec miniatures, lecture inline, tags filtrables, rognage FFmpeg, déduplication MD5, quota 40 GB et alertes Discord." data-en="Automatic media upload to a VPS via a Windows feeder (.exe, PyInstaller) + FastAPI API. Gallery with thumbnails, inline playback, filterable tags, FFmpeg cropping, MD5 deduplication, 40 GB quota and Discord alerts.">Upload automatique de médias vers un VPS via un feeder Windows (.exe PyInstaller) + API FastAPI. Galerie avec miniatures, lecture inline, tags filtrables, rognage FFmpeg, déduplication MD5, quota 40 GB et alertes Discord.</p>
           <div class="project-tags">
             <span class="tag">Python</span>
             <span class="tag">FastAPI</span>
@@ -940,7 +964,7 @@ footer {
             <span class="tag">GitHub Actions</span>
           </div>
           <a href="https://memoss.nathangracia.com" target="_blank" class="project-link" style="color: var(--red)">
-            Voir en prod
+            <span data-fr="Voir en prod" data-en="View live">Voir en prod</span>
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
           </a>
         </div>
@@ -953,7 +977,7 @@ footer {
         <div class="project-body">
           <div class="project-type" style="color: var(--violet)">Data Science · ML</div>
           <h3 class="project-title">LoL Pro Match Predictor</h3>
-          <p class="project-desc">Prédiction de l'issue d'un match pro League of Legends en temps réel (10–25 min). XGBoost, TabNet et FT-Transformer optimisé via Optuna. AUC 0.957 à 25 min sur 9 236 matchs. Dashboard Streamlit avec deux modes de saisie.</p>
+          <p class="project-desc" data-fr="Prédiction de l'issue d'un match pro League of Legends en temps réel (10–25 min). XGBoost, TabNet et FT-Transformer optimisé via Optuna. AUC 0.957 à 25 min sur 9 236 matchs. Dashboard Streamlit avec deux modes de saisie." data-en="Real-time outcome prediction for pro League of Legends matches (10–25 min). XGBoost, TabNet and FT-Transformer tuned with Optuna. 0.957 AUC at 25 min on 9,236 matches. Streamlit dashboard with two input modes.">Prédiction de l'issue d'un match pro League of Legends en temps réel (10–25 min). XGBoost, TabNet et FT-Transformer optimisé via Optuna. AUC 0.957 à 25 min sur 9 236 matchs. Dashboard Streamlit avec deux modes de saisie.</p>
           <div class="project-tags">
             <span class="tag">Python</span>
             <span class="tag">XGBoost</span>
@@ -962,7 +986,7 @@ footer {
             <span class="tag">Jupyter</span>
           </div>
           <a href="https://p9.nathangracia.com" target="_blank" class="project-link" style="color: var(--violet)">
-            Voir en prod
+            <span data-fr="Voir en prod" data-en="View live">Voir en prod</span>
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
           </a>
         </div>
@@ -975,7 +999,7 @@ footer {
         <div class="project-body">
           <div class="project-type" style="color: var(--violet)">Computer Vision · Deep Learning</div>
           <h3 class="project-title">Segmentation sémantique</h3>
-          <p class="project-desc">Classification pixel par pixel en 8 catégories sur Cityscapes. U-Net + MobileNetV2, 74% mIoU. API FastAPI + app Streamlit déployées sur VPS personnel.</p>
+          <p class="project-desc" data-fr="Classification pixel par pixel en 8 catégories sur Cityscapes. U-Net + MobileNetV2, 74% mIoU. API FastAPI + app Streamlit déployées sur VPS personnel." data-en="Pixel-by-pixel classification into 8 categories on Cityscapes. U-Net + MobileNetV2, 74% mIoU. FastAPI API + Streamlit app deployed on a personal VPS.">Classification pixel par pixel en 8 catégories sur Cityscapes. U-Net + MobileNetV2, 74% mIoU. API FastAPI + app Streamlit déployées sur VPS personnel.</p>
           <div class="project-tags">
             <span class="tag">TensorFlow</span>
             <span class="tag">FastAPI</span>
@@ -984,7 +1008,7 @@ footer {
             <span class="tag">GitHub Actions</span>
           </div>
           <a href="https://p8.nathangracia.com" target="_blank" class="project-link" style="color: var(--violet)">
-            Voir en prod
+            <span data-fr="Voir en prod" data-en="View live">Voir en prod</span>
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
           </a>
         </div>
@@ -995,9 +1019,9 @@ footer {
           <img src="images/blindtoss.png" alt="blindtest-films" />
         </div>
         <div class="project-body">
-          <div class="project-type" style="color: var(--red)">Web App · Temps réel</div>
+          <div class="project-type" style="color: var(--red)" data-fr="Web App · Temps réel" data-en="Web App · Real-time">Web App · Temps réel</div>
           <h3 class="project-title">blindtest-films</h3>
-          <p class="project-desc">Blindtest musical (films, séries, jeux, anime). Solo et multijoueur temps réel, scoring vitesse, 3 vies, autocomplétion par distance de Levenshtein. Import automatisé via OMDb et YouTube, audio normalisé FFmpeg.</p>
+          <p class="project-desc" data-fr="Blindtest musical (films, séries, jeux, anime). Solo et multijoueur temps réel, scoring vitesse, 3 vies, autocomplétion par distance de Levenshtein. Import automatisé via OMDb et YouTube, audio normalisé FFmpeg." data-en="Music blind test (movies, TV shows, games, anime). Real-time solo and multiplayer, speed scoring, 3 lives, Levenshtein-distance autocomplete. Automated import via OMDb and YouTube, FFmpeg-normalised audio.">Blindtest musical (films, séries, jeux, anime). Solo et multijoueur temps réel, scoring vitesse, 3 vies, autocomplétion par distance de Levenshtein. Import automatisé via OMDb et YouTube, audio normalisé FFmpeg.</p>
           <div class="project-tags">
             <span class="tag">Next.js</span>
             <span class="tag">TypeScript</span>
@@ -1006,7 +1030,7 @@ footer {
             <span class="tag">Docker</span>
           </div>
           <a href="https://blindtoss.nathangracia.com" target="_blank" class="project-link" style="color: var(--red)">
-            Voir en prod
+            <span data-fr="Voir en prod" data-en="View live">Voir en prod</span>
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
           </a>
         </div>
@@ -1019,9 +1043,9 @@ footer {
           </div>
         </div>
         <div class="project-body">
-          <div class="project-type" style="color: var(--red)">Web App · Jeu · Multijoueur</div>
+          <div class="project-type" style="color: var(--red)" data-fr="Web App · Jeu · Multijoueur" data-en="Web App · Game · Multiplayer">Web App · Jeu · Multijoueur</div>
           <h3 class="project-title">BlackJackoss</h3>
-          <p class="project-desc">Blackjack multijoueur 1-7 joueurs avec comptage de cartes, stratégie de base, 19 succès débloquables et skins de table. Timer de tour, chat, roue d'émotes. Entropie physique via lampe à lave (Determinoss). Balances SQLite persistées.</p>
+          <p class="project-desc" data-fr="Blackjack multijoueur 1-7 joueurs avec comptage de cartes, stratégie de base, 19 succès débloquables et skins de table. Timer de tour, chat, roue d'émotes. Entropie physique via lampe à lave (Determinoss). Balances SQLite persistées." data-en="1-7 player multiplayer blackjack with card counting, basic strategy, 19 unlockable achievements and table skins. Turn timer, chat, emote wheel. Physical entropy via lava lamp (Determinoss). Persistent SQLite balances.">Blackjack multijoueur 1-7 joueurs avec comptage de cartes, stratégie de base, 19 succès débloquables et skins de table. Timer de tour, chat, roue d'émotes. Entropie physique via lampe à lave (Determinoss). Balances SQLite persistées.</p>
           <div class="project-tags">
             <span class="tag">Node.js</span>
             <span class="tag">WebSocket</span>
@@ -1029,7 +1053,7 @@ footer {
             <span class="tag">Docker</span>
           </div>
           <a href="https://blackjackoss.nathangracia.com" target="_blank" class="project-link" style="color: var(--red)">
-            Voir en prod
+            <span data-fr="Voir en prod" data-en="View live">Voir en prod</span>
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
           </a>
         </div>
@@ -1044,7 +1068,7 @@ footer {
         <div class="project-body">
           <div class="project-type" style="color: var(--violet)">Simulation · Canvas 2D</div>
           <h3 class="project-title">Simulatioss</h3>
-          <p class="project-desc">Simulation d'écosystème procédurale en temps réel. 3 espèces coexistantes (plantes, herbivores, carnivores), pathfinding A*, biomes procéduraux avec lacs dessinables, 30+ paramètres ajustables, graphe de population live.</p>
+          <p class="project-desc" data-fr="Simulation d'écosystème procédurale en temps réel. 3 espèces coexistantes (plantes, herbivores, carnivores), pathfinding A*, biomes procéduraux avec lacs dessinables, 30+ paramètres ajustables, graphe de population live." data-en="Real-time procedural ecosystem simulation. 3 coexisting species (plants, herbivores, carnivores), A* pathfinding, procedural biomes with drawable lakes, 30+ adjustable parameters, live population graph.">Simulation d'écosystème procédurale en temps réel. 3 espèces coexistantes (plantes, herbivores, carnivores), pathfinding A*, biomes procéduraux avec lacs dessinables, 30+ paramètres ajustables, graphe de population live.</p>
           <div class="project-tags">
             <span class="tag">TypeScript</span>
             <span class="tag">Canvas 2D</span>
@@ -1052,7 +1076,7 @@ footer {
             <span class="tag">Docker</span>
           </div>
           <a href="https://simulatioss.nathangracia.com" target="_blank" class="project-link" style="color: var(--violet)">
-            Voir en prod
+            <span data-fr="Voir en prod" data-en="View live">Voir en prod</span>
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
           </a>
         </div>
@@ -1065,9 +1089,9 @@ footer {
           </div>
         </div>
         <div class="project-body">
-          <div class="project-type" style="color: var(--violet)">Cryptographie · IoT</div>
+          <div class="project-type" style="color: var(--violet)" data-fr="Cryptographie · IoT" data-en="Cryptography · IoT">Cryptographie · IoT</div>
           <h3 class="project-title">Determinoss</h3>
-          <p class="project-desc">Générateur de graines cryptographiques alimenté par l'entropie physique d'une lampe à lave filmée 24/7. Delta de frame → SHA-256. API REST, SSE live, stream MJPEG webcam. Intégré au sabot de BlackJackoss.</p>
+          <p class="project-desc" data-fr="Générateur de graines cryptographiques alimenté par l'entropie physique d'une lampe à lave filmée 24/7. Delta de frame → SHA-256. API REST, SSE live, stream MJPEG webcam. Intégré au sabot de BlackJackoss." data-en="Cryptographic seed generator powered by the physical entropy of a lava lamp filmed 24/7. Frame delta → SHA-256. REST API, live SSE, MJPEG webcam stream. Integrated into BlackJackoss's card shoe.">Générateur de graines cryptographiques alimenté par l'entropie physique d'une lampe à lave filmée 24/7. Delta de frame → SHA-256. API REST, SSE live, stream MJPEG webcam. Intégré au sabot de BlackJackoss.</p>
           <div class="project-tags">
             <span class="tag">Node.js</span>
             <span class="tag">FFmpeg</span>
@@ -1075,7 +1099,7 @@ footer {
             <span class="tag">Docker</span>
           </div>
           <a href="https://determinoss.nathangracia.com" target="_blank" class="project-link" style="color: var(--violet)">
-            Voir en prod
+            <span data-fr="Voir en prod" data-en="View live">Voir en prod</span>
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
           </a>
         </div>
@@ -1088,9 +1112,9 @@ footer {
           </div>
         </div>
         <div class="project-body">
-          <div class="project-type" style="color: var(--violet)">IA · Éducation</div>
+          <div class="project-type" style="color: var(--violet)" data-fr="IA · Éducation" data-en="AI · Education">IA · Éducation</div>
           <h3 class="project-title">Quizzoss</h3>
-          <p class="project-desc">App quiz générant des questions depuis des notes Markdown via Gemini AI. MCQ avec distracteurs IA du même type, texte libre évalué, tutorat inline, éditeur intégré, rebuild en live, sync Syncthing.</p>
+          <p class="project-desc" data-fr="App quiz générant des questions depuis des notes Markdown via Gemini AI. MCQ avec distracteurs IA du même type, texte libre évalué, tutorat inline, éditeur intégré, rebuild en live, sync Syncthing." data-en="Quiz app generating questions from Markdown notes via Gemini AI. MCQs with same-type AI-generated distractors, graded free-text answers, inline tutoring, built-in editor, live rebuild, Syncthing sync.">App quiz générant des questions depuis des notes Markdown via Gemini AI. MCQ avec distracteurs IA du même type, texte libre évalué, tutorat inline, éditeur intégré, rebuild en live, sync Syncthing.</p>
           <div class="project-tags">
             <span class="tag">Python</span>
             <span class="tag">FastAPI</span>
@@ -1098,7 +1122,7 @@ footer {
             <span class="tag">Docker</span>
           </div>
           <a href="https://quizzoss.nathangracia.com" target="_blank" class="project-link" style="color: var(--violet)">
-            Voir en prod
+            <span data-fr="Voir en prod" data-en="View live">Voir en prod</span>
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
           </a>
         </div>
@@ -1113,8 +1137,8 @@ footer {
   <div class="container">
     <div class="section-label">Contact</div>
     <div class="reveal">
-      <h2 class="contact-headline">Un projet ?<br><em>Parlons.</em></h2>
-      <p class="contact-sub">Missions, CDI, ou simple échange. Basé à Rennes.</p>
+      <h2 class="contact-headline" data-fr-html="Un projet ?&lt;br&gt;&lt;em&gt;Parlons.&lt;/em&gt;" data-en-html="A project?&lt;br&gt;&lt;em&gt;Let's talk.&lt;/em&gt;">Un projet ?<br><em>Parlons.</em></h2>
+      <p class="contact-sub" data-fr="Missions, CDI, ou simple échange. Basé à Rennes." data-en="Freelance, full-time, or just a chat. Based in Rennes.">Missions, CDI, ou simple échange. Basé à Rennes.</p>
       <div class="contact-links">
         <a href="mailto:nathan.gracia.863@gmail.com" class="contact-link">
           <div class="contact-link-icon">
@@ -1217,35 +1241,19 @@ darkBtn.addEventListener('click', () => {
 });
 
 /* ── LANGUAGE TOGGLE ──────────────────── */
-const translations = {
-  fr: {
-    eyebrow: 'Rennes · Disponible',
-    heroSub: '<strong>Développeur web & Data Scientist.</strong> Je construis des outils, analyse des données et entraîne des modèles. Des deux côtés du spectre, de l\'extraction à la mise en production.',
-    btnProjects: 'Voir mes projets',
-    btnCV: 'Mon CV',
-    navCta: 'Me contacter',
-  },
-  en: {
-    eyebrow: 'Rennes · Available',
-    heroSub: '<strong>Web Developer & Data Scientist.</strong> I build tools, analyse data and train models. Across the full spectrum, from extraction to production.',
-    btnProjects: 'See my projects',
-    btnCV: 'My CV',
-    navCta: 'Contact me',
-  }
-};
-
 const langBtn = document.getElementById('lang-toggle-btn');
 let lang = localStorage.getItem('lang') || 'fr';
 
 function setLang(l) {
   lang = l;
   localStorage.setItem('lang', l);
-  const t = translations[l];
-  document.getElementById('hero-eyebrow').textContent = t.eyebrow;
-  document.getElementById('hero-sub').innerHTML = t.heroSub;
-  document.getElementById('btn-projects').innerHTML = `${t.btnProjects} <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg>`;
-  document.getElementById('btn-cv-text').textContent = t.btnCV;
-  document.getElementById('nav-cta-btn').textContent = t.navCta;
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-fr]').forEach(el => {
+    el.textContent = l === 'en' ? el.dataset.en : el.dataset.fr;
+  });
+  document.querySelectorAll('[data-fr-html]').forEach(el => {
+    el.innerHTML = l === 'en' ? el.dataset.enHtml : el.dataset.frHtml;
+  });
 }
 
 langBtn.classList.toggle('on', lang === 'en');
