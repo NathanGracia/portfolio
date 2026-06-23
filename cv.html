@@ -111,6 +111,8 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.4;
 }
 .contact-item strong { font-weight: 500; color: var(--ink); }
+.contact-item a { color: inherit; text-decoration: none; }
+.contact-item a:hover { text-decoration: underline; }
 
 /* ── BODY ── */
 .body {
@@ -238,6 +240,13 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
   letter-spacing: -.01em;
 }
+.project-name span a {
+  color: inherit;
+  text-decoration: none;
+}
+.project-name span a:hover {
+  text-decoration: underline;
+}
 .project-name span {
   font-size: 7.5pt;
   font-weight: 400;
@@ -338,6 +347,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: 4px;
   border: 1px solid var(--rule);
 }
+a.loisir-tag:hover { text-decoration: underline; }
 
 
 /* ── PRINT ── */
@@ -371,10 +381,10 @@ a { color: inherit; text-decoration: none; }
     <div class="header-contacts">
       <div class="contact-item"><strong>Rennes</strong> · Permis B</div>
       <div class="contact-item">Disponible sept. 2026</div>
-      <div class="contact-item">nathan.gracia.863@gmail.com</div>
-      <div class="contact-item">06 41 84 19 49</div>
-      <div class="contact-item">github.com/NathanGracia</div>
-      <div class="contact-item">nathangracia.com</div>
+      <div class="contact-item"><a href="mailto:nathan.gracia.863@gmail.com">nathan.gracia.863@gmail.com</a></div>
+      <div class="contact-item"><a href="tel:+33641841949">06 41 84 19 49</a></div>
+      <div class="contact-item"><a href="https://github.com/NathanGracia" target="_blank" rel="noopener">github.com/NathanGracia</a></div>
+      <div class="contact-item"><a href="https://nathangracia.com" target="_blank" rel="noopener">nathangracia.com</a></div>
     </div>
   </header>
 
@@ -439,27 +449,27 @@ a { color: inherit; text-decoration: none; }
         <div class="section-title violet">Projets</div>
         <div class="projects-list">
           <div class="project-item">
-            <div class="project-name">LoL Pro Match Predictor <span>p9.nathangracia.com</span></div>
+            <div class="project-name">LoL Pro Match Predictor <span><a href="https://p9.nathangracia.com" target="_blank" rel="noopener">p9.nathangracia.com</a></span></div>
             <div class="project-desc">Prédiction temps réel de l'issue d'un match pro LoL. AUC 0.957 à 25 min sur 9 236 matchs. XGBoost, TabNet, FT-Transformer, Optuna.</div>
             <div class="project-tech">Python · XGBoost · Streamlit · Docker</div>
           </div>
           <div class="project-item">
-            <div class="project-name">Segmentation sémantique <span>p8.nathangracia.com</span></div>
+            <div class="project-name">Segmentation sémantique <span><a href="https://p8.nathangracia.com" target="_blank" rel="noopener">p8.nathangracia.com</a></span></div>
             <div class="project-desc">Classification pixel par pixel en 8 catégories (Cityscapes). U-Net + MobileNetV2, 74% mIoU. API + Streamlit sur VPS.</div>
             <div class="project-tech">TensorFlow · FastAPI · Docker · GitHub Actions</div>
           </div>
           <div class="project-item">
-            <div class="project-name">blindtest-films <span>blindtoss.nathangracia.com</span></div>
+            <div class="project-name">blindtest-films <span><a href="https://blindtoss.nathangracia.com" target="_blank" rel="noopener">blindtoss.nathangracia.com</a></span></div>
             <div class="project-desc">Blindtest musical solo/multi temps réel. Scoring vitesse, autocomplétion Levenshtein, import OMDb/YouTube, audio FFmpeg.</div>
             <div class="project-tech">Next.js · TypeScript · Socket.IO · Prisma</div>
           </div>
           <div class="project-item">
-            <div class="project-name">media-gallery <span>memoss.nathangracia.com</span></div>
+            <div class="project-name">media-gallery <span><a href="https://memoss.nathangracia.com" target="_blank" rel="noopener">memoss.nathangracia.com</a></span></div>
             <div class="project-desc">Pipeline d'upload vers VPS via feeder .exe + API FastAPI. Tags filtrables, déduplication MD5, quota 40 GB, alertes Discord.</div>
             <div class="project-tech">Python · FastAPI · Docker · FFmpeg</div>
           </div>
         </div>
-        <div style="margin-top:8px; font-size:7.5pt; color:var(--ink2); font-weight:300;">Et d'autres disponibles sur <span style="color:var(--red); font-weight:500;">github.com/NathanGracia</span></div>
+        <div style="margin-top:8px; font-size:7.5pt; color:var(--ink2); font-weight:300;">Et d'autres disponibles sur <a href="https://github.com/NathanGracia" target="_blank" rel="noopener" style="color:var(--red); font-weight:500; text-decoration:none;">github.com/NathanGracia</a></div>
       </div>
 
     </div>
@@ -599,7 +609,7 @@ a { color: inherit; text-decoration: none; }
       <div class="section-group">
         <div class="section-title">Loisirs</div>
         <div class="loisirs-list">
-          <span class="loisir-tag">Cinéma</span>
+          <a class="loisir-tag" href="https://letterboxd.com/DeusKiwi/" target="_blank" rel="noopener" style="text-decoration:none;">Cinéma</a>
           <span class="loisir-tag">League of Legends (top 0.3%)</span>
           <span class="loisir-tag">Poker</span>
         </div>
